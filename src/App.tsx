@@ -3,7 +3,7 @@ import Main from "./components/Main";
 
 const App = () => {
     return (
-        <div>
+        <div className={'d-flex justify-content-center'}>
             <Main/>
         </div>
     );
