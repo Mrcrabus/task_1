@@ -1,17 +1,18 @@
 import React from 'react';
-import {Container, Card, Form} from "react-bootstrap";
+import {Card, Form} from "react-bootstrap";
 
 const FilterByStops = () => {
     return (
         <Card
-            className={'d-flex flex-column justify-content-center align-items-center '}
-            style={{width: 232, height: 227}}
-
+            className={'d-flex flex-column justify-content-center align-items-start '}
+            style={{width: 232, height: 227, borderRadius: 5}}
         >
-            Количество пересадок
+
             <Form>
 
-                <div key={`default-checkbox`} className="mb-3">
+                <div key={`default-checkbox`} className={'d-flex flex-column  justify-content-around'}
+                     style={{width: 232, height: 177, padding: 30}}>
+                    <h6 className={'text-nowrap'}>Количество пересадок</h6>
                     <Form.Check
                         type={'checkbox'}
                         id={`default-checkbox`}
