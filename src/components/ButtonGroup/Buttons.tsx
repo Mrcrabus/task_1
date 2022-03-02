@@ -1,35 +1,51 @@
 import React, {useState} from 'react';
-import {ButtonGroup, ToggleButton, Button} from "react-bootstrap";
 
 
 const Buttons = () => {
-    const [radioValue, setRadioValue] = useState('1');
+    const [value, setValue] = useState('1');
 
-    const radios = [
-        {name: 'Самый дешевый', value: '1'},
-        {name: 'Самый быстрый', value: '2'},
-        {name: 'Оптимальный', value: '3'},
-    ];
+    // const radios = [
+    //     {name: 'Самый дешевый', value: '1'},
+    //     {name: 'Самый быстрый', value: '2'},
+    //     {name: 'Оптимальный', value: '3'},
+    // ];
 
 
     return (
 
-        <ButtonGroup>
-            {radios.map((radio, idx) => (
-                <ToggleButton
-                    key={idx}
-                    id={`radio-${idx}`}
-                    type="radio"
-                    variant={'outline-primary'}
-                    name="radio"
-                    value={radio.value}
-                    checked={radioValue === radio.value}
-                    onChange={(e) => setRadioValue(e.currentTarget.value)}
-                >
-                    {radio.name}
-                </ToggleButton>
-            ))}
-        </ButtonGroup>
+        <div>
+            <button
+                type={"button"}
+                className={'border-solid border-2 border-gray-400 rounded-l-lg bg-white hover:bg-blue-50 w-[168px] h-[50px]'}
+            >
+                Самый дешевый
+            </button>
+            <button
+                type={"button"}
+                className={'border-solid border-2 border-gray-400 bg-white hover:bg-blue-50 w-[168px] h-[50px]'}
+            >
+                Самый быстрый
+            </button>
+            <button
+                type={"button"}
+                className={'border-solid border-2 border-gray-400 rounded-r-lg bg-white hover:bg-blue-50 w-[168px] h-[50px]'}
+            >
+                Оптимальный
+            </button>
+        </div>
+
+        // <div>
+        //     {radios.map((radio, idx) => (
+        //         <button
+        //             key={idx}
+        //             id={`radio-${idx}`}
+        //             value={radio.value}
+        //             onChange={(e: { currentTarget: { value: React.SetStateAction<string>; }; }) => setRadioValue(e.currentTarget.value)}
+        //         >
+        //             {radio.name}
+        //         </button>
+        //     ))}
+        // </div>
 
         // <div className="btn-group" role="group" aria-label="Basic radio toggle button group">
         //     <input type="radio" className="btn-check" name="btnradio" id="btnradio1" autoComplete="off"/>

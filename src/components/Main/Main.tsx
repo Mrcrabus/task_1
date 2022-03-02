@@ -9,8 +9,9 @@ const Main = () => {
     return (
         <MainLayout>
             <div className={'flex justify-between items-start'}>
-                <div>
-                    <FilterByStops/>
+                <div className={'flex flex-col justify-between items-start h-[500px]'}>
+                    {/*<FilterByStops/>*/}
+                    <FilterByCompany/>
                     <FilterByCompany/>
                 </div>
                 <div>
