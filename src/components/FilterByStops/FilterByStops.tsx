@@ -1,10 +1,10 @@
 import React from 'react';
-import {Card, Form} from "react-bootstrap";
+import { Formik, Field, Form } from 'formik';
 
 const FilterByStops = () => {
     return (
         <Card
-            className={'d-flex flex-column justify-content-center align-items-start '}
+            className={' '}
             style={{width: 232, height: 227, borderRadius: 5}}
         >
 

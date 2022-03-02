@@ -1,14 +1,13 @@
 import React, {FC} from 'react';
-import {Container, Image} from 'react-bootstrap';
 import Logo from '../assests/Logo.svg'
 
 const MainLayout: FC = ({children}) => {
     return (
-        <Container className={'d-flex flex-column align-items-center justify-content-center  m-5 '}>
-            <div><Image src={Logo} alt="..."/></div>
+        <div className={'flex justify-center items-center flex-col'}>
+            <div className={'m-5 '}><img src={Logo} alt="..."/></div>
             <div>{children}</div>
 
-        </Container>
+        </div>
     );
 };
 

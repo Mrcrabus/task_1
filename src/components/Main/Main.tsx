@@ -8,7 +8,7 @@ import Items from "../Items/Items";
 const Main = () => {
     return (
         <MainLayout>
-            <div className={'d-flex justify-content-between align-items-start'}>
+            <div className={'flex justify-between items-start'}>
                 <div>
                     <FilterByStops/>
                     <FilterByCompany/>
