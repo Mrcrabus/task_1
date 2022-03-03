@@ -10,9 +10,9 @@ const Main = () => {
         <MainLayout>
             <div className={'flex justify-between items-start'}>
                 <div className={'flex flex-col justify-between items-start h-[500px]'}>
-                    {/*<FilterByStops/>*/}
+                    <FilterByStops/>
                     <FilterByCompany/>
-                    <FilterByCompany/>
+
                 </div>
                 <div>
                     <Buttons/>

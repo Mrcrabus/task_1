@@ -1,43 +1,51 @@
 import React from 'react';
-import { Formik, Field, Form } from 'formik';
+import {Formik, Field, Form} from 'formik';
+
+
+interface State {
+    checked: Array<string>;
+}
 
 const FilterByStops = () => {
+
+    const initialValues: State = {checked: []};
+
     return (
-        <div
-            className={' '}
-            style={{width: 232, height: 227, borderRadius: 5}}
-        >
+        <div>
+            <Formik
+                initialValues={initialValues}
+                onSubmit={values => console.log(values.checked)}
+            >
+                {({values}) => (
+                    <Form
+                        className={' border-solid border-2 drop-shadow-lg flex items-center justify-center rounded-md bg-white w-[232px] h-[177px]'}>
 
-            {/*<Form>*/}
+                        <div className={'flex flex-col justify-center h-[100%] '} role="group"
+                             aria-labelledby="checkbox-group">
+                            <div>Количество пересадок</div>
+                            <label>
+                                <Field type="checkbox" name="checked" value="Without"/>
+                                Без пересадок
+                            </label>
+                            <label>
+                                <Field type="checkbox" name="checked" value="One"/>
+                                1 пересадка
+                            </label>
+                            <label>
+                                <Field type="checkbox" name="checked" value="Two"/>
+                                2 пересадки
+                            </label>
+                            <label>
+                                <Field type="checkbox" name="checked" value="Three"/>
+                                3 пересадки
+                            </label>
+                            <button type="submit">Submit</button>
+                        </div>
 
-            {/*    <div key={`default-checkbox`} className={'d-flex flex-column  justify-content-around'}*/}
-            {/*         style={{width: 232, height: 177, padding: 30}}>*/}
-            {/*        <h6 className={'text-nowrap'}>Количество пересадок</h6>*/}
-            {/*        <Form.Check*/}
-            {/*            type={'checkbox'}*/}
-            {/*            id={`default-checkbox`}*/}
-            {/*            label={`Без пересадок`}*/}
-            {/*        />*/}
-            {/*        <Form.Check*/}
-            {/*            type={'checkbox'}*/}
-            {/*            id={`default-checkbox`}*/}
-            {/*            label={`1 пересадка`}*/}
-            {/*        />*/}
-            {/*        <Form.Check*/}
-            {/*            type={'checkbox'}*/}
-            {/*            id={`default-checkbox`}*/}
-            {/*            label={`2 пересадки`}*/}
-            {/*        />*/}
-            {/*        <Form.Check*/}
-            {/*            type={'checkbox'}*/}
-            {/*            id={`default-checkbox`}*/}
-            {/*            label={`3 пересадки`}*/}
-            {/*        />*/}
 
-            {/*    </div>*/}
-
-            {/*</Form>*/}
-
+                    </Form>
+                )}
+            </Formik>
 
         </div>
     );
