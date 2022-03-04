@@ -20,7 +20,7 @@ const FilterByStops = () => {
                     <Form
                         className={' border-solid border-2 drop-shadow-lg flex items-center justify-center rounded-md bg-white w-[232px] h-[177px]'}>
 
-                        <div className={'flex flex-col justify-center h-[100%] '} role="group"
+                        <div className={'flex flex-col items-start justify-evenly whitespace-nowrap w-[70%] h-[100%] '} role="group"
                              aria-labelledby="checkbox-group">
                             <div>Количество пересадок</div>
                             <label>
@@ -39,7 +39,7 @@ const FilterByStops = () => {
                                 <Field type="checkbox" name="checked" value="Three"/>
                                 3 пересадки
                             </label>
-                            <button type="submit">Submit</button>
+                            <button className={'border-solid border-2 rounded-md p-1 bg-blue-500 text-white'} type="submit">Применить</button>
                         </div>
 
 

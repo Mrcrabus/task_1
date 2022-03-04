@@ -1,31 +1,28 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+import {createSlice, PayloadAction} from '@reduxjs/toolkit'
+import {Segment} from "../../types/interfaces";
 
-export interface CounterState {
-    value: number
-}
 
-const initialState: CounterState = {
-    value: 0,
+const initialState: Segment = {
+    id: '',
+    origin: 'MOW',
+    destination: 'MOW',
+    dateStart: '',
+    dateEnd: '',
+    stops: [],
+    duration: 0
 }
 
 const counterSlice = createSlice({
-    name: 'counter',
+    name: 'segments',
     initialState,
     reducers: {
-        increment: (state) => {
+        filterSegments: (state) => {
 
-            state.value += 1
-        },
-        decrement: (state) => {
-            state.value -= 1
-        },
-        incrementByAmount: (state, action: PayloadAction<number>) => {
-            state.value += action.payload
-        },
+        }
     },
 })
 
 // Action creators are generated for each case reducer function
-export const { increment, decrement, incrementByAmount } = counterSlice.actions
+export const {} = counterSlice.actions
 
 export default counterSlice.reducer

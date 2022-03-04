@@ -3,16 +3,16 @@ import {Formik, Field, Form} from 'formik';
 
 
 interface State {
-    picked: "All"| "S7 Airlines" | "XiamenAir";
+    picked: "All" | "S7 Airlines" | "XiamenAir";
 }
 
 
 const FilterByCompany = () => {
 
-    const initialValues: State = { picked: 'All' };
+    const initialValues: State = {picked: 'All'};
 
     return (
-        <div>
+        <div className={'mt-[20px]'}>
             <Formik
                 initialValues={initialValues}
                 onSubmit={values => console.log(values)}>
@@ -20,7 +20,7 @@ const FilterByCompany = () => {
                     <Form
                         className={' border-solid border-2 drop-shadow-lg flex items-center justify-center rounded-md bg-white w-[232px] h-[177px]'}>
 
-                        <div className={'flex flex-col justify-center h-[100%] '} role="group"
+                        <div className={'flex flex-col justify-start w-[70%] h-[100%] '} role="group"
                              aria-labelledby="my-radio-group">
                             <div className={'flex flex-col items-start justify-evenly h-[100%]  '}>
                                 <div>Компании</div>
@@ -36,7 +36,9 @@ const FilterByCompany = () => {
                                     <Field type="radio" name="picked" value="XiamenAir"/>
                                     XiamenAir
                                 </label>
-                                <button type="submit">Submit</button>
+                                <button className={'border-solid border-2 rounded-md p-1 bg-blue-500 text-white'}
+                                        type="submit">Применить
+                                </button>
                             </div>
                             {/*<div>Picked: {values.picked}</div>*/}
                         </div>

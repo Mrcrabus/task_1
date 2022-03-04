@@ -1,9 +1,12 @@
 import React from 'react';
 import Item from "./Item/Item";
-import segments from '../../constants/segments.json'
+import segments from '../../constants/segments.json';
+
 import {CityCodes} from "../../types/interfaces";
 
 const Items = () => {
+
+
     console.log(segments[0])
     return (
         <div>

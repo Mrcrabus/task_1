@@ -4,16 +4,10 @@ import React, {useState} from 'react';
 const Buttons = () => {
     const [value, setValue] = useState('1');
 
-    // const radios = [
-    //     {name: 'Самый дешевый', value: '1'},
-    //     {name: 'Самый быстрый', value: '2'},
-    //     {name: 'Оптимальный', value: '3'},
-    // ];
-
 
     return (
 
-        <div>
+        <div className={'ml-[20px]'}>
             <button
                 type={"button"}
                 className={'border-solid border-2 border-gray-400 rounded-l-lg bg-white hover:bg-blue-50 w-[168px] h-[50px]'}
