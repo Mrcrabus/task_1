@@ -10,7 +10,7 @@ const Items = () => {
     const segments = useTypedSelector(state => state.segments);
 
 
-    console.log(segments[0])
+
     return (
         <div>
             {segments.map((el) => (
