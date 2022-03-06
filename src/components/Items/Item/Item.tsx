@@ -2,21 +2,22 @@ import React, {FC} from 'react';
 import {Segment} from '../../../types/interfaces';
 import companies from '../../../constants/companies.json';
 import tickets from '../../../constants/tickets.json';
+import {Logo} from '../../../constants/logo'
 
 
 const Item: FC<Segment> = ({id, origin, destination, dateStart, dateEnd, stops, duration}) => {
 
-    const findPrice = (id: string) => {
+    const price = (id: string) => {
         return {...tickets.find(el => el.segments.includes(id))}.price
     }
-    const findCompany = (id: string) => {
+    const company = (id: string) => {
         return {
             ...companies.find(company =>
                 company.id === {...tickets.find(el => el.segments.includes(id))}.companyId)
         }.name
     }
 
-    console.log(findCompany(id))
+    // console.log( Logo['XiamenAir'])
 
     const timeOnTable = (time: string) => {
         let date = new Date(parseInt(time))
@@ -29,8 +30,8 @@ const Item: FC<Segment> = ({id, origin, destination, dateStart, dateEnd, stops, 
         <div
             className={'border-solid border-2 drop-shadow-lg flex flex-col items-center justify-evenly rounded-md bg-white m-[20px] w-[502px] h-[184px]'}>
             <div className={'flex justify-between items-center w-[90%] h-[40%]'}>
-                <div>{findPrice(id)}</div>
-                <div>{findCompany(id)}</div>
+                <div>{price(id)}</div>
+                <div>{ company(id)}</div>
             </div>
             <div className={'flex justify-between w-[90%] h-[60%]'}>
                 <div>

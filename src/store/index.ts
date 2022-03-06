@@ -1,11 +1,11 @@
 import {configureStore} from '@reduxjs/toolkit'
 
-import counterReducer from './reducers/reducer'
+import counterReducer from './reducers/segmentsReducer'
 
 
 export const store = configureStore({
     reducer: {
-        counter: counterReducer
+        segments: counterReducer
     },
 })
 

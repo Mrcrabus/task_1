@@ -1,8 +1,6 @@
-import s7 from '../assests/S7 Logo.png'
-import Xiamen from '../assests/XiamenAir Logo.png'
+let path = require('path');
 
-
-export enum Enum {
-    XiamenAir= "XiamenAir"
-    s7 =
+export const Logo = {
+    'XiamenAir': path.resolve(__dirname, './src/assests/XiamenAir Logo.png'),
+    'S7 Airlines': path.resolve(__dirname, './src/assests/S7 Logo.png'),
 }

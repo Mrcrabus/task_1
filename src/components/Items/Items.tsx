@@ -1,10 +1,13 @@
 import React from 'react';
 import Item from "./Item/Item";
-import segments from '../../constants/segments.json';
 
 import {CityCodes} from "../../types/interfaces";
+import {useTypedSelector} from "../hooks/useTypedSelector";
+import {useDispatch} from "react-redux";
 
 const Items = () => {
+
+    const segments = useTypedSelector(state => state.segments);
 
 
     console.log(segments[0])
