@@ -17,7 +17,6 @@ const Item: FC<Segment> = ({id, origin, destination, dateStart, dateEnd, stops, 
         }.name
     }
 
-    // console.log( Logo['XiamenAir'])
 
     const timeOnTable = (time: string) => {
         let date = new Date(parseInt(time))

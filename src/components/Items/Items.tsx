@@ -3,7 +3,6 @@ import Item from "./Item/Item";
 
 import {CityCodes} from "../../types/interfaces";
 import {useTypedSelector} from "../hooks/useTypedSelector";
-import {useDispatch} from "react-redux";
 
 const Items = () => {
 
