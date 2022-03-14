@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {useDispatch} from "react-redux";
-import {sortTickets} from "../../store/reducers/ticketsReducer";
+import {sortTickets, sortTicketsRevert} from "../../store/reducers/ticketsReducer";
 
 
 const Buttons = () => {
@@ -20,7 +20,8 @@ const Buttons = () => {
             </button>
             <button
                 type={"button"}
-                className={'border-solid border-2 border-gray-400 bg-white hover:bg-blue-50 w-[168px] h-[50px]'}
+                className={'border-solid border-2 border-gray-400 bg-white  hover:bg-blue-50 w-[168px] h-[50px]'}
+                onClick={() => dispatch(sortTicketsRevert())}
             >
                 Самый быстрый
             </button>
