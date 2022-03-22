@@ -9,13 +9,13 @@ const segmentsSlice = createSlice({
     name: 'segments',
     initialState,
     reducers: {
-        sortSegments: (state) => {
-            state.sort((a, b) => a.stops.length > b.stops.length ? 1 : -1);
+        segmentsState: (state) => {
+            return state;
         }
     },
 })
 
 // Action creators are generated for each case reducer function
-export const {sortSegments} = segmentsSlice.actions
+export const {segmentsState} = segmentsSlice.actions
 
 export default segmentsSlice.reducer
