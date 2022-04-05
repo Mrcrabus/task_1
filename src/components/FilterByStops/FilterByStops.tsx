@@ -1,5 +1,7 @@
 import React from 'react';
 import {Formik, Field, Form} from 'formik';
+import {useDispatch} from "react-redux";
+import {segmentsState} from "../../store/reducers/segmentsReducer";
 
 
 interface State {
@@ -8,13 +10,17 @@ interface State {
 
 const FilterByStops = () => {
 
+    let dispatch = useDispatch()
+
     const initialValues: State = {checked: []};
+
 
     return (
         <div>
             <Formik
                 initialValues={initialValues}
-                onSubmit={values => console.log(values.checked)}
+                // @ts-ignore
+                onSubmit={() => dispatch(segmentsState(1))}
             >
                 {({values}) => (
                     <Form

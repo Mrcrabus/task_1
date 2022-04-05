@@ -9,8 +9,9 @@ const segmentsSlice = createSlice({
     name: 'segments',
     initialState,
     reducers: {
-        segmentsState: (state) => {
-            return state;
+        segmentsState: (state, {payload}: PayloadAction<number>) => {
+            console.log(state)
+            return state.filter(el => el.stops?.length === 1);
         }
     },
 })

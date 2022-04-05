@@ -19,17 +19,6 @@ const Items = () => {
                     companyId={el.companyId}
                     segments={el.segments}
                 />
-                // <Item
-                //     dateEnd={el.dateEnd.toString()}
-                //     id={el.id}
-                //     dateStart={el.dateStart.toString()}
-                //     destination={el.destination as CityCodes}
-                //     duration={el.duration}
-                //     stops={el.stops as CityCodes[]}
-                //     origin={el.origin as CityCodes}
-                //     key={el.id}
-                //
-                // />
             ))}
 
 

@@ -61,8 +61,8 @@ const Item: FC<Ticket> = ({id, price, companyId, segments}) => {
 
             <div className={'w-[90%] h-[60%]'}>
                 <div>
-                    {items.map(segment =>
-                        <div className={'flex items-center justify-between w-full border-t-2 border-gray-300'}>
+                    {items.map((segment, i) =>
+                        <div key={i} className={'flex items-center justify-between w-full border-t-2 border-gray-300'}>
                             <div>
                                 <div className={'text-neutral-400'}>{segment?.origin} - {segment?.destination}</div>
                                 <div>{timeOnTable(segment?.dateStart)} - {timeOnTable(segment?.dateEnd)}</div>

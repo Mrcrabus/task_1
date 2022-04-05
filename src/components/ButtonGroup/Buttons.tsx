@@ -4,7 +4,6 @@ import {sortTickets, sortTicketsRevert} from "../../store/reducers/ticketsReduce
 
 
 const Buttons = () => {
-    const [value, setValue] = useState('1');
 
     let dispatch = useDispatch()
 
